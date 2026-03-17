@@ -172,7 +172,7 @@ export default function useSchedule() {
                         clients: time.clients.filter((client) => client.id !== idClient)
                     }
                     : time
-                ))
+                )).filter((time) => time.clients.length > 0)
             })
             : agenda
         )))
